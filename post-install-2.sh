@@ -1,12 +1,15 @@
 
-sudo pacman -S xorg-xwayland wlroots qt6-wayland sway waybar polkit-kde-agent sddm pipewire pipewire-jack pavucontrol alacritty mupdf sxiv chromium
+sudo pacman -S xorg-xwayland wlroots qt6-wayland sway waybar polkit-kde-agent sddm pipewire pipewire-pulse wireplumber pavucontrol alacritty mupdf sxiv chromium git
+
 sudo systemctl enable sddm.service
+systemctl --user enable pipewire.service
+systemctl --user enable pipewire-pulse.service
+systemctl --user enable wireplumber.service
 
 mkdir ~/.config/ 
 mkdir ~/.config/sway
 mkdir ~/.config/waybar
 
-sudo cp /usr/share/pipewire ~/.config/pipewire
 
 mkdir ~/Git
 cd !$ 
