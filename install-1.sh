@@ -4,18 +4,18 @@
 timedatectl set-ntp true
 
 # Utilidad para particionar
-lsblk
+#lsblk
 
-echo "Ingrese la particion home para formatear sin anteponer /dev: "
-read disk1
-mkfs.ext4 /dev/$disk1
+#echo "Ingrese la particion home para formatear sin anteponer /dev: "
+#read disk1
+#mkfs.ext4 /dev/$disk1
 
-lsblk 
-echo "Ingrese la particion para el sistema sin anteponer /dev:  "
-cfdisk /dev/sdb
-mkfs.ext4 /dev/sdb
-cfdisk /dev/sdb
-clear
+#lsblk 
+#echo "Ingrese la particion para el sistema sin anteponer /dev:  "
+#cfdisk /dev/sdb
+#mkfs.ext4 /dev/sdb
+#cfdisk /dev/sdb
+#clear
 
 lsblk
 
@@ -55,6 +55,8 @@ pacstrap /mnt base base-devel linux linux-firmware neovim
 
 # genero el esquema de particiones
 genfstab -U /mnt >> /mnt/etc/fstab
+
+mv *.sh /mnt
 
 # hago el change root al nuevo sistema
 arch-chroot /mnt
