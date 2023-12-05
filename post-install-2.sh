@@ -1,5 +1,5 @@
 # Estos son paquetes para mi configuración de escritorio.
-sudo pacman -S sway polkit-kde-agent sddm pulseaudio alsa-utils pavucontrol alacritty mupdf sxiv chromium git
+sudo pacman -S sway xorg-xwayland polkit-kde-agent sddm pulseaudio alsa-utils pavucontrol alacritty mupdf sxiv chromium git
 
 sudo systemctl enable sddm.service
 
