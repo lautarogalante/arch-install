@@ -41,4 +41,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Configuracion de la opcion para dualboot
 nvim /etc/default/grub
 
-
+# execute exit, ummount and reboot 
